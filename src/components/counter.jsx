@@ -20,7 +20,7 @@ const Counter = () => {
   }
 
   const decrementHendler = (prodId) => {
-    if (count === 0) return setCount(0)
+    if (count === 0) return
     return setCount((prev) => prev - 1)
   }
   return (
