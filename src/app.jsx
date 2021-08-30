@@ -23,16 +23,18 @@ function App() {
     setCounters(initialState)
   }
   const incrementHandle = (id) => {
-    const counter = counters.find((c) => c.id === id)
+    const newCounters = [...counters]
+    const counter = newCounters.find((c) => c.id === id)
     counter.value += 1
-    setCounters([...counters])
+    setCounters([...newCounters])
   }
 
   const decrementHendler = (id) => {
-    const counter = counters.find((c) => c.id === id)
-
+    const newCounters = [...counters]
+    const counter = newCounters.find((c) => c.id === id)
     if (counter.value > 0) counter.value -= 1
-    setCounters([...counters])
+
+    setCounters([...newCounters])
   }
   return (
     <div className='col-lg-8 mx-auto p-3 py-md-5'>
